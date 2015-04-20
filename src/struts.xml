@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<constant name="struts.i18n.encoding" value="utf-8" />
+	<package name="HumanResourceManage" namespace="/" extends="struts-default">
+		 <action name="login" class="com.butterfly.action.UserAction">
+            <result name="error" >/index.jsp</result>
+            <result name="success" type="redirect" >/main.jsp</result>
+        </action>
+        <action name="department" class="com.butterfly.action.DepartmentAction">
+        </action>
+        <action name="employee" class="com.butterfly.action.EmployeeAction">
+        </action>  
+         <action name="stipend" class="com.butterfly.action.StipendAction">
+        </action> 
+        <action name="train" class="com.butterfly.action.TrainAction">
+        	<result name="success">/detailTrain.jsp</result>
+        </action>    
+        <action name="job" class="com.butterfly.action.JobAction">
+        	<result name="detail">/detailJob.jsp</result>
+        	<result name="list">/listJob.jsp</result>
+        </action> 
+         <action name="institution" class="com.butterfly.action.InstitutionAction">
+        	<result name="success">/listinstitution.jsp</result>
+        </action> 
+	</package>     
+</struts>
